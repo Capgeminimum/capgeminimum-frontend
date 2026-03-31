@@ -32,8 +32,29 @@
     font-weight: bold;
 }
 
-.nav {
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 4px;
   margin-right: 20px;
+}
+
+.avatar-header {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.avatar-img:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.nav { 
   display: flex;
   justify-content: flex-end; 
   gap: 40px; 
@@ -63,6 +84,7 @@
     cursor: pointer;
     font-weight: bold;
     font-family: inter;
+    margin-bottom: 5px;
 }
 
 .login-btn:hover {
