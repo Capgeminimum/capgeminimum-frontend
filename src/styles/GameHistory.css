@@ -1,0 +1,73 @@
+.history-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto 0 auto;
+  padding: 0 20px 40px 20px;
+  box-sizing: border-box;
+}
+
+.history-title {
+  color: #2ecc71;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1.2fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.history-header {
+  color: #a8b3c7;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.history-row {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-top: 14px;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.history-row:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-1px);
+}
+
+.result-cell,
+.date-cell,
+.score-cell,
+.type-cell,
+.elo-cell {
+  font-size: 18px;
+}
+
+.result-cell.win {
+  color: #2ecc71;
+  font-weight: 700;
+}
+
+.result-cell.lose {
+  color: #ff4d4f;
+  font-weight: 700;
+}
+
+.elo-positive {
+  color: #2ecc71;
+  font-weight: 700;
+}
+
+.elo-negative {
+  color: #ff4d4f;
+  font-weight: 700;
+}
