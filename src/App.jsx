@@ -1,9 +1,15 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Tournament from "./pages/Tournament"
+import TournamentDetails from "./pages/TournamentDetails"
+
 function App() {
   return (
-    <div>
-      <h1>Mon premier projet React 🚀</h1>
-      <p>Ça marche ! 😎</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/tournois" element={<Tournament />} />
+        <Route path="/tournois/:id" element={<TournamentDetails />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
