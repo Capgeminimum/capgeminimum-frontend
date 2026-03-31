@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
+import Header from "../components/Header"
 import "../styles/Tournaments.css"
 
 function TournamentDetails() {
@@ -49,42 +50,45 @@ function TournamentDetails() {
   }
 
   return (
-    <section className="details-page">
-    <button
-      className="close-button"
-      onClick={() => navigate("/tournois")}
-    >
-      ✖
-    </button>
-      <h1 className="details-page__title">{tournament.title}</h1>
+    <div>
+      <Header />
+      <section className="details-page" style={{marginTop:"80px"}}>
+      <button
+        className="close-button"
+        onClick={() => navigate("/tournois")}
+      >
+        ✖
+      </button>
+        <h1 className="details-page__title">{tournament.title}</h1>
 
-      <div className="details-page__card">
-        <p className="details-page__text">{tournament.details}</p>
+        <div className="details-page__card">
+          <p className="details-page__text">{tournament.details}</p>
 
-        <p className="details-page__status">
-          Statut : <span>{tournament.status}</span>
-        </p>
+          <p className="details-page__status">
+            Statut : <span>{tournament.status}</span>
+          </p>
 
-        <button
-          className={`details-page__button ${joined ? "is-joined" : ""}`}
-          onClick={() => setJoined(!joined)}
-        >
-          {joined ? "Déjà rejoint" : "Rejoindre"}
-        </button>
-      </div>
-
-      <div className="participants-card">
-        <h2 className="participants-card__title">Participants</h2>
-
-        <div className="participants-list">
-          {tournament.participants.map((participant, index) => (
-            <div key={index} className="participant-chip">
-              {participant}
-            </div>
-          ))}
+          <button
+            className={`details-page__button ${joined ? "is-joined" : ""}`}
+            onClick={() => setJoined(!joined)}
+          >
+            {joined ? "Déjà rejoint" : "Rejoindre"}
+          </button>
         </div>
-      </div>
-    </section>
+
+        <div className="participants-card">
+          <h2 className="participants-card__title">Participants</h2>
+
+          <div className="participants-list">
+            {tournament.participants.map((participant, index) => (
+              <div key={index} className="participant-chip">
+                {participant}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   )
 }
 
