@@ -1,10 +1,16 @@
 import Header from "../components/Header";
 import Podium from "../components/Podium";
 import TournamentCard from "../components/TournamentsCard";
-import TournamentDetails from "./TournamentDetails";
-// import TournamentsCard from "../components/TournamentsCard";
 
+/**
+ * Home page.
+ * Displays the main header, featured tournament cards and podium section.
+ */
 function HomePage() {
+  /**
+   * Renders the home page layout.
+   * @returns {JSX.Element}
+   */
   return (
     <div>
       <Header />

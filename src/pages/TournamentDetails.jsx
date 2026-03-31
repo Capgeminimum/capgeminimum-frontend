@@ -4,11 +4,16 @@ import { useState } from "react"
 import Header from "../components/Header"
 import "../styles/tournaments.css"
 
+/**
+ * Tournament details page.
+ * Displays one tournament selected by route parameter and allows join toggle.
+ */
 function TournamentDetails() {
   const { id } = useParams()
   const [joined, setJoined] = useState(false)
   const navigate = useNavigate()
 
+  // Temporary static dataset. Replace with API data when backend is connected.
   const tournaments = [
     {
       id: "1",
@@ -43,12 +48,20 @@ function TournamentDetails() {
     },
   ]
 
+  /**
+   * Finds the selected tournament from the route id.
+   * @type {{id: string, title: string, details: string, status: string, participants: string[]} | undefined}
+   */
   const tournament = tournaments.find((item) => item.id === id)
 
   if (!tournament) {
     return <h1 style={{ color: "white", padding: "40px" }}>Tournoi introuvable</h1>
   }
 
+  /**
+   * Renders tournament details with participants and join action.
+   * @returns {JSX.Element}
+   */
   return (
     <div>
       <Header />

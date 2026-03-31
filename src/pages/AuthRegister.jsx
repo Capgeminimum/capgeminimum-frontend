@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 
+/**
+ * Registration page.
+ * Allows a user to enter pseudo/email/password and submit registration form.
+ * Current behavior: local state only + console/alert (no API call yet).
+ */
 export default function Register() {
   const [formData, setFormData] = useState({
     pseudo: '',
@@ -7,11 +12,21 @@ export default function Register() {
     password: '',
     confirmPassword: ''
   });
-
+  
+  /**
+   * Updates form fields when an input changes.
+   * @param {React.ChangeEvent<HTMLInputElement>} e
+   */
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  /**
+   * Handles register form submission.
+   * Checks if password and confirmPassword match.
+   * TODO: replace console log with backend registration request.
+   * @param {React.FormEvent<HTMLFormElement>} e
+   */
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
@@ -21,6 +36,13 @@ export default function Register() {
     console.log("Nouveau joueur recruté :", formData);
   };
 
+  /**
+   * Renders:
+   * - auth page container
+   * - registration form
+   * - submit button
+   * @returns {JSX.Element}
+   */
   return (
     <div className="auth-container">
       <div className="auth-card">

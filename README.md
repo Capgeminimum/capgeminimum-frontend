@@ -1,16 +1,42 @@
-# React + Vite
+# Capgeminimum Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend application for managing and exploring football tournaments.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Capgeminimum is a React + Vite web app with:
+- tournament listing
+- tournament details page
+- leaderboard
+- profile page
+- authentication pages (login/register)
+- tournament creation form
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- React Router
+- Vite
+- ESLint
 
-## Expanding the ESLint configuration
+## Routes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `/` → Home
+- `/tournois` → Tournament list
+- `/tournois/:id` → Tournament details
+- `/create-tournament` → Create tournament
+- `/leaderboard` → Leaderboard
+- `/profil` → Profile
+- `/login` → Login
+- `/register` → Register
+
+## Getting Started
+
+### Prerequisites
+- Node.js 18+ (recommended)
+- npm
+
+### Installation
+
+```bash
+npm install

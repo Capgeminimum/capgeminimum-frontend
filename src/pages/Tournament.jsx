@@ -2,7 +2,12 @@ import TournamentCard from "../components/TournamentsCard"
 import Header from "../components/Header"
 import "../styles/tournaments.css"
 
+/**
+ * Tournament listing page.
+ * Shows a list of available tournaments.
+ */
 function Tournament() {
+  // Temporary static dataset. Replace with API data when backend is connected.
   const tournaments = [
     {
       id: 1,
@@ -24,6 +29,10 @@ function Tournament() {
     },
   ]
 
+  /**
+   * Renders the tournament list page.
+   * @returns {JSX.Element}
+   */
   return (
     <div>
       <Header />

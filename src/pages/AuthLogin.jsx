@@ -1,22 +1,45 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * Login page.
+ * Allows a user to enter email/password and submit credentials.
+ * Current behavior: local state only + console/alert (no API call yet).
+ */
 export default function Login() {
   const [credentials, setCredentials] = useState({
     email: '',
     password: ''
   });
 
+  /**
+   * Updates `credentials` when an input value changes.
+   * @param {React.ChangeEvent<HTMLInputElement>} e
+   */
   const handleChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
 
+  /**
+   * Handles login form submission.
+   * Prevents default form reload.
+   * TODO: replace alert/console with backend authentication request.
+   * @param {React.FormEvent<HTMLFormElement>} e
+   */
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Tentative de connexion :", credentials);
     alert("Analyse de la feuille de match... Connexion en cours !");
   };
 
+  /**
+   * Renders:
+   * - auth page container
+   * - login form (email/password)
+   * - submit button
+   * - link to registration page
+   * @returns {JSX.Element}
+   */
   return (
     <div className="auth-container">
       <div className="auth-card">
