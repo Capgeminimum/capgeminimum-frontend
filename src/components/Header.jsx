@@ -10,7 +10,7 @@ function Header() {
       <div className="right">
         <nav className="nav">
           <Link to="/">Accueil</Link>
-          <Link to="/toornament">Tournois</Link>
+          <Link to="/tournois">Tournois</Link>
           <Link to="/leaderboard">Leaderboard</Link>
           <Link to="/profil">Profil</Link>
         </nav>
@@ -21,7 +21,7 @@ function Header() {
           </Link>
         </div>
           <Link to="/login">
-            <button className="login-btn">Login</button>
+            <button className="login-btn">Connexion</button>
           </Link>
         
       </div>

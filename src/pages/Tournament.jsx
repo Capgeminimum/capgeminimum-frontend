@@ -1,4 +1,5 @@
 import TournamentCard from "../components/TournamentsCard"
+import Header from "../components/Header"
 import "../styles/Tournaments.css"
 
 function Tournament() {
@@ -24,19 +25,23 @@ function Tournament() {
   ]
 
   return (
-    <div style={{ padding: "40px" }}>
-      <h1>Tournois</h1>
+    <div>
+      <Header />
+      <div style={{ padding: "40px", marginTop:"80px" }}>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-        {tournaments.map((tournament) => (
-          <TournamentCard
-            key={tournament.id}
-            id={tournament.id}
-            title={tournament.title}
-            description={tournament.description}
-            image={tournament.image}
-          />
-        ))}
+        <h1>Tournois</h1>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+          {tournaments.map((tournament) => (
+            <TournamentCard
+              key={tournament.id}
+              id={tournament.id}
+              title={tournament.title}
+              description={tournament.description}
+              image={tournament.image}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )

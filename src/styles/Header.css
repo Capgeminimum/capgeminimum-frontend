@@ -17,6 +17,7 @@
     width: 100%;
     z-index: 1000;
     height: 100px;
+    font-family: inter;
 }
 
 .right {
@@ -58,6 +59,7 @@
   display: flex;
   justify-content: flex-end; 
   gap: 40px; 
+
 }
 
 .nav a {
@@ -67,7 +69,6 @@
     font-weight: 500;
     margin-left: auto;
     color: #2ecc71;
-    font-family: inter;
 }
 
 .nav a:hover {
