@@ -1,16 +1,12 @@
-import React from "react";
-import Header from "./components/Header";
-import Podium from "./components/Podium"
-import "./style/App.css"
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <div>
-      <Header />
-      <main style={{ padding: "20px", marginTop:"80px" }}>
-        
-      </main>
-      <Podium />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
     </div>
   );
 }
