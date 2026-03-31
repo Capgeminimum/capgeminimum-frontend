@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 import Header from "../components/Header"
-import "../styles/Tournaments.css"
+import "../styles/tournaments.css"
 
 function TournamentDetails() {
   const { id } = useParams()

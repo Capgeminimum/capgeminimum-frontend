@@ -1,6 +1,6 @@
 import TournamentCard from "../components/TournamentsCard"
 import Header from "../components/Header"
-import "../styles/Tournaments.css"
+import "../styles/tournaments.css"
 
 function Tournament() {
   const tournaments = [

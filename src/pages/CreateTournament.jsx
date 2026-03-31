@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "../styles/Tournaments.css"
+import "../styles/tournaments.css"
 
 function CreateTournament() {
   const [title, setTitle] = useState("")
