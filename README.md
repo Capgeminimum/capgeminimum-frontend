@@ -1,1 +1,0 @@
-# capgeminimum-frontend
