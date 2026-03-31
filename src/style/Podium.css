@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.podium-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.podium {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.podium-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first .rank {
+  color: gold;
+  font-size: 2.5rem;
+}
+
+.second .rank {
+  color: silver;
+}
+
+.third .rank {
+  color: #cd7f32; 
+}
+
+.player-name {
+  margin: 0 0 10px 0;
+  font-weight: bold;
+}
+
+.crown {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #1d1b22;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: white;
+  margin-bottom: 10px;
+}
+
+.step {
+  width: 120px;
+  background-color: #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first .step {
+  height: 140px;
+}
+
+.second .step {
+  height: 110px;
+}
+
+.third .step {
+  height: 90px;
+}
+
+.rank {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+
+
+.crown-img {
+    max-height: 150px;
+    max-width: 200px;
+    width: 120px;
+    height: 120px;
+}
+
+.avatar-img {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #1d1b22;
+  border-radius: 50%;
+  object-fit: cover;
+  background: white;
+  margin-bottom: 10px;
+}
